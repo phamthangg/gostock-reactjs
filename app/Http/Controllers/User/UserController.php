@@ -41,11 +41,11 @@ class UserController extends Controller
         if ($user && Hash::check($request->password, $user->password)) // The passwords match...
         {
 
-            $token = self::getToken($request->email, $request->password);
-            $user->auth_token = $token;
+//            $token = self::getToken($request->email, $request->password);
+//            $user->auth_token = $token;
             $user->save();
 
-            $response = ['success'=>true, 'data'=>['id'=>$user->id,'auth_token'=>$user->auth_token,'name'=>$user->name, 'email'=>$user->email]];
+            $response = ['success'=>true, 'data'=>['id'=>$user->id,'name'=>$user->name, 'email'=>$user->email]];
         }
         else
             $response = ['success'=>false, 'data'=>'Record doesnt exists'];
@@ -59,23 +59,23 @@ class UserController extends Controller
             'password'=>\Hash::make($request->password),
             'email'=>$request->email,
             'name'=>$request->name,
-            'auth_token'=> ''
+//            'auth_token'=> ''
         ];
 
         $user = new User($payload);
         if ($user->save()) {
 
-            $token = self::getToken($request->email, $request->password); // generate user token
+//            $token = self::getToken($request->email, $request->password); // generate user token
 
-            if (!is_string($token))  return response()->json(['success'=>false,'data'=>'Token generation failed'], 201);
+//            if (!is_string($token))  return response()->json(['success'=>false,'data'=>'Token generation failed'], 201);
 
             $user = User::where('email', $request->email)->get()->first();
 
-            $user->auth_token = $token; // update user token
+//            $user->auth_token = $token; // update user token
 
             $user->save();
 
-            $response = ['success'=>true, 'data'=>['name'=>$user->name,'id'=>$user->id,'email'=>$request->email,'auth_token'=>$token]];
+            $response = ['success'=>true, 'data'=>['name'=>$user->name,'id'=>$user->id,'email'=>$request->email]];
         } else
             $response = ['success'=>false, 'data'=>'Couldnt register user'];
 

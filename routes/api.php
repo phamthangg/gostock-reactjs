@@ -28,7 +28,7 @@ Route::group(['middleware' => ['jwt.auth','api-header']], function () {
         return response()->json($response, 201);
     });
 });
-Route::group(['namespace' => 'User','prefix' => 'user'], function () {
+Route::group(['middleware' => ['api', 'cors'],'namespace' => 'User','prefix' => 'user'], function () {
     Route::post('/login', 'UserController@login');
     Route::post('/register', 'UserController@register');
 });
