@@ -36,12 +36,9 @@ class RegisterForm extends React.Component {
     formikForm = React.createRef();
     handleRegister = (data) => {
         var formData = new FormData();
-        // formData.append("email", data.emailAddress);
-        // formData.append("password", data.password);
-        // formData.append("name", data.firstName);
-        formData.set('email', 'z@gmail.com');
-        formData.set('name', 'dung');
-        formData.set('password', '123');
+        formData.append("email", data.emailAddress);
+        formData.append("password", data.password);
+        formData.append("first_name", data.firstName);
         const response =
             axios.post("http://localhost:8000/api/user/register",formData,);
         // const response = fetch('http://localhost/api/user/register', {
