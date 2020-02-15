@@ -2,7 +2,9 @@ import React from "react";
 import * as yup from "yup";
 import {Formik} from 'formik'
 import axios from "axios";
+import {redirectPage} from "../services/utils";
 import {Button} from "react-bootstrap";
+import loginUrls from '../modules/Account/urls';
 
 const schema = yup.object({
     firstName: yup.string().notRequired(),
@@ -31,91 +33,37 @@ const initValues ={
     city: '',
     country: '',
     tel: '',
-}
+};
 class RegisterForm extends React.Component {
     formikForm = React.createRef();
     handleRegister = (data) => {
         var formData = new FormData();
-        // formData.append("email", data.emailAddress);
-        // formData.append("password", data.password);
-        // formData.append("name", data.firstName);
-        formData.set('email', 'z@gmail.com');
-        formData.set('name', 'dung');
-        formData.set('password', '123');
-        const response =
-            axios.post("http://localhost:8000/api/user/register",formData,);
-        // const response = fetch('http://localhost/api/user/register', {
-        //     method: 'POST',
-        //     headers: { 'Content-Type': 'application/json'},
-        //     body: JSON.stringify({
-        //         email: 'dung2@gmail.com',
-        //         name: 'dung',
-        //         password:'123'
-        //     }),
-        // })
-        // console.log(response.data);
-
-
-        // axios.post('http://localhost:8000/api/user/register',
-        //     {
-        //             email: 'dung2@gmail.com',
-        //             name: 'dung2',
-        //             password: '123',
-        //          },
-        //     {
-        //         useCredentails: true
-        //     }
-        //
-        //     ).then((response) => {
-        //     console.log("zxc")
-        // });
-        // axios
-        //     .post("http://localhost:8000/api/user/register", {
-        //         email: 'dung2@gmail.com',
-        //         name: 'dung2',
-        //         password: '123',
-        //     })
-        //     .then(response => {
-        //         console.log(response);
-        //         return response;
-        //     })
-        //     .then(json => {
-        //         if (json.data.success) {
-        //             alert(`Registration Successful!`);
-        //             const { name, id, email, auth_token } = json.data.data;
-        //             let userData = {
-        //                 name,
-        //                 id,
-        //                 email,
-        //                 auth_token,
-        //                 timestamp: new Date().toString()
-        //             };
-        //             let appState = {
-        //                 isLoggedIn: true,
-        //                 user: userData
-        //             };
-        //             // save app state with user date in local storage
-        //             localStorage["appState"] = JSON.stringify(appState);
-        //             this.setState({
-        //                 isLoggedIn: appState.isLoggedIn,
-        //                 user: appState.user
-        //             });
-        //             // redirect home
-        //             //this.props.history.push("/");
-        //         } else {
-        //             alert(`Registration Failed!`);
-        //             $("#email-login-btn")
-        //                 .removeAttr("disabled")
-        //                 .html("Register");
-        //         }
-        //     })
-        //     .catch(error => {
-        //         alert("An Error Occured!" + error);
-        //         console.log(`${formData} ${error}`);
-        //         $("#email-login-btn")
-        //             .removeAttr("disabled")
-        //             .html("Register");
-        //     });
+        formData.append("email", data.emailAddress);
+        formData.append("password", data.password);
+        formData.append("first_name", data.firstName);
+        formData.append("last_name", data.lastName);
+        formData.append("birthday", data.birthday);
+        formData.append("address", data.address);
+        formData.append("district", data.district);
+        formData.append("city", data.city);
+        formData.append("country", data.country);
+        formData.append("phone", data.tel);
+        axios
+            .post("http://localhost:8000/api/user/register",formData)
+            .then(response => {
+                console.log(response);
+                return response;
+            })
+            .then(json => {
+                if (json.data.success) {
+                    redirectPage(loginUrls.login)
+                } else {
+                    alert(`Registration Failed!`);
+                }
+            })
+            .catch(error => {
+                alert("An Error Occured!" + error);
+            });
 
     };
     render() {

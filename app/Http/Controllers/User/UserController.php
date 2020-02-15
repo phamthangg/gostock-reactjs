@@ -55,10 +55,18 @@ class UserController extends Controller
 
     public function register(Request $request)
     {
+
         $payload = [
             'password'=>\Hash::make($request->password),
             'email'=>$request->email,
-            'name'=>$request->name,
+            'first_name'=>$request->first_name,
+            'last_name'=>$request->last_name,
+            'birthday'=>$request->birthday,
+            'address'=>$request->address,
+            'district'=>$request->district,
+            'city'=>$request->city,
+            'country'=>$request->country,
+            'phone'=>$request->phone,
 //            'auth_token'=> ''
         ];
 
@@ -75,7 +83,18 @@ class UserController extends Controller
 
             $user->save();
 
-            $response = ['success'=>true, 'data'=>['name'=>$user->name,'id'=>$user->id,'email'=>$request->email]];
+            $response = ['success'=>true, 'data'=>[
+                'first_name'=>$user->first_name,
+                'id'=>$user->id,
+                'email'=>$request->email,
+                'last_name'=>$request->last_name,
+                'birthday'=>$request->birthday,
+                'address'=>$request->address,
+                'district'=>$request->district,
+                'city'=>$request->city,
+                'country'=>$request->country,
+                'phone'=>$request->phone,
+            ]];
         } else
             $response = ['success'=>false, 'data'=>'Couldnt register user'];
 
