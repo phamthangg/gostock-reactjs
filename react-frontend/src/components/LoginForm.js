@@ -1,5 +1,58 @@
 import React from "react";
+import * as yup from "yup";
+import {Formik} from 'formik'
+import axios from "axios";
+import {redirectPage} from "../services/utils";
+import {HOME_URL} from "../setting";
+
+const schema = yup.object({
+    emailAddress: yup.string().notRequired(),
+    password: yup.string().notRequired(),
+
+});
+const initValues ={
+    emailAddress: '',
+    password: '',
+};
+
 class LoginForm extends React.Component {
+    formikForm = React.createRef();
+    handleLogin = (data) => {
+        var formData = new FormData();
+        formData.append("email", data.emailAddress);
+        formData.append("password", data.password);
+        axios
+            .post("http://localhost:8000/api/user/login",formData)
+            .then(response => {
+                console.log(response);
+                return response;
+            })
+            .then(json => {
+                if (json.data.success) {
+                    const { name, id, email } = json.data.data;
+                    let userData = {
+                        name,
+                        id,
+                        email,
+                    };
+                    let appState = {
+                        isLoggedIn: true,
+                        user: userData
+                    };
+                    localStorage["appState"] = JSON.stringify(appState);
+                    this.setState({
+                        isLoggedIn: appState.isLoggedIn,
+                        user: appState.user
+                    });
+                    redirectPage(HOME_URL)
+                } else {
+                    alert(`Registration Failed!`);
+                }
+            })
+            .catch(error => {
+                alert("An Error Occured!" + error);
+            });
+    };
     render() {
         return (
             <>
@@ -24,19 +77,42 @@ class LoginForm extends React.Component {
                                                 <h4 className="text-uppercase mt-3">Đăng nhập với tài khoản</h4>
                                                 <p className="mt-3">Vui lòng nhập thông tin tài khoản của bạn</p>
                                             </div>
-
-                                            <form action="#" className="pt-1">
+                                            <Formik
+                                                initialValues={initValues}
+                                                validateOnChange={false}
+                                                ref={this.formikForm}
+                                                validationSchema={schema}
+                                                onSubmit={ values => {
+                                                    return this.handleLogin(values);
+                                                }}
+                                            >
+                                                {({
+                                                      handleSubmit,
+                                                      handleChange,
+                                                      values,
+                                                      isValid,
+                                                      errors,
+                                                  }) => (
+                                            <form noValidate action="" method="post" onSubmit={handleSubmit} className="pt-1">
 
                                                 <div className="form-group mb-3">
-                                                    <label htmlFor="emailaddress">Email</label>
-                                                    <input className="form-control" type="email" id="emailaddress"
-                                                           required="" placeholder="Email"/>
+                                                    <label htmlFor="emailAddress">Email</label>
+                                                    <input className="form-control"
+                                                           type="email"
+                                                           id="emailAddress"
+                                                           value={values.emailAddress}
+                                                           onChange={handleChange}
+                                                           placeholder="Email"/>
                                                 </div>
 
                                                 <div className="form-group mb-3">
                                                     <label htmlFor="password">Mật khẩu</label>
-                                                    <input className="form-control" type="password" required=""
-                                                           id="password" placeholder="Mật khẩu"/>
+                                                    <input className="form-control"
+                                                           type="password"
+                                                           required id="password"
+                                                           value={values.password}
+                                                           onChange={handleChange}
+                                                           placeholder="Mật khẩu"/>
                                                 </div>
 
                                                 <div className="form-group mb-3 text-center">
@@ -71,7 +147,8 @@ class LoginForm extends React.Component {
 
 
                                             </form>
-
+                                                )}
+                                            </Formik>
                                             <div className="row mt-3">
                                                 <div className="col-12 text-center">
                                                     <a href="auth-register.html"

@@ -1,6 +1,17 @@
 import React from "react";
 
 class Home extends React.Component {
+    state = {
+        name: JSON.parse(localStorage["appState"]).user.name ? JSON.parse(localStorage["appState"]).user.name : "Trần Dần"
+    };
+    logoutUser = () => {
+        let appState = {
+            isLoggedIn: false,
+            user: {}
+        };
+        localStorage["appState"] = JSON.stringify(appState);
+        window.location.reload();
+    };
     render() {
         return (
            <>
@@ -180,7 +191,7 @@ class Home extends React.Component {
                                         <img src="../assets/images/users/avatar-4.jpg" alt="user-image"
                                              className="rounded-circle"/>
                         <span className="pro-user-name ml-1 text-muted">
-                            Trần Dần <i className="mdi mdi-chevron-down"></i>
+                           {this.state.name} <i className="mdi mdi-chevron-down"></i>
                         </span>
                                     </a>
                                     <div className="dropdown-menu dropdown-menu-right profile-dropdown ">
@@ -194,7 +205,7 @@ class Home extends React.Component {
                                             <span>Đăng ký và gia hạn dịch vụ</span>
                                         </a>
                                         <div className="dropdown-divider"></div>
-                                        <a href="auth-login.html" className="dropdown-item notify-item">
+                                        <a onClick={this.logoutUser} className="dropdown-item notify-item">
                                             <i className="dripicons-power"></i>
                                             <span>Đăng xuất</span>
                                         </a>
