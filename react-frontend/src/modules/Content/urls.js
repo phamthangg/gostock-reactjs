@@ -10,6 +10,7 @@ const CONTENT_URLS = {
     signalsFilters: `${CONTENT_MODULE}/signalsFilters`,
     recommendations: `${CONTENT_MODULE}/recommendations`,
     catalogManagement: `${CONTENT_MODULE}/catalogManagement`,
+    filter: `${CONTENT_MODULE}/filter`,
 };
 
 export default CONTENT_URLS;

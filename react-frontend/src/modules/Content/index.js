@@ -5,6 +5,7 @@ import TechnicalAnalysis from "./screens/ContentMain/TechnicalAnalysis";
 import SignalsFilters from "./screens/ContentMain/SignalsFilters";
 import Recommendations from "./screens/ContentMain/Recommendations";
 import CatalogManagement from "./screens/ContentMain/CatalogManagement";
+import Filter from "./screens/ContentMain/Filter";
 
 import {AnonymousRoute} from '../../components/Route';
 
@@ -17,6 +18,7 @@ class Content extends React.Component {
             <AnonymousRoute exact path={urls.signalsFilters} component={SignalsFilters}/>
             <AnonymousRoute exact path={urls.recommendations} component={Recommendations}/>
             <AnonymousRoute exact path={urls.catalogManagement} component={CatalogManagement}/>
+            <AnonymousRoute exact path={urls.filter} component={Filter}/>
         </div>
     }
 }
