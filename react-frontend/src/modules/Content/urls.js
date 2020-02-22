@@ -12,6 +12,7 @@ const CONTENT_URLS = {
     catalogManagement: `${CONTENT_MODULE}/catalogManagement`,
     filter: `${CONTENT_MODULE}/filter`,
     philTown: `${CONTENT_MODULE}/philTown`,
+    detailsCharts: `${CONTENT_MODULE}/detailsCharts`,
 };
 
 export default CONTENT_URLS;
