@@ -7,12 +7,12 @@ class RecoverPassword extends React.Component {
                 <div className="account-pages w-100 mt-5 mb-5">
                     <div className="container-fluid">
                         <div className="row d-flex justify-content-center flex-row auth-cust-bg">
-                            <div className="col auth-cust-bg-left"><img src="assets/images/gs-left.png"/></div>
+                            <div className="col auth-cust-bg-left"><img src="../assets/images/gs-left.png"/></div>
                             <div className="col">
                                 <a href="index.html"
                                    className="logo bg-transparent d-flex justify-content-center ml-auto mr-auto mb-2">
                                 <span className="logo-auth">
-                                    <img src="assets/images/logo-dark.png" alt="" height="22"/>
+                                    <img src="../assets/images/logo-dark.png" alt="" height="22"/>
                                 </span>
                                 </a>
                                 <div className="card">
@@ -42,7 +42,7 @@ class RecoverPassword extends React.Component {
                                     </div>
                                 </div>
                             </div>
-                            <div className="col auth-cust-bg-right"><img src="assets/images/auth-right.png"/></div>
+                            <div className="col auth-cust-bg-right"><img src="../assets/images/auth-right.png"/></div>
                         </div>
                     </div>
                 </div>
