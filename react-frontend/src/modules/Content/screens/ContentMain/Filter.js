@@ -1174,7 +1174,6 @@ class Filter extends React.Component {
                         </div>
                     </div>
                 </body>
-                <script src="assets/libs/jquery-cscrollbar/jquery.scrollbar.js" type="text/javascript"></script>
             </>
         )
     }
