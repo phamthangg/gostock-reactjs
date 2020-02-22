@@ -9,6 +9,7 @@ const CONTENT_URLS = {
     technicalAnalysis: `${CONTENT_MODULE}/technicalAnalysis`,
     signalsFilters: `${CONTENT_MODULE}/signalsFilters`,
     recommendations: `${CONTENT_MODULE}/recommendations`,
+    catalogManagement: `${CONTENT_MODULE}/catalogManagement`,
 };
 
 export default CONTENT_URLS;
