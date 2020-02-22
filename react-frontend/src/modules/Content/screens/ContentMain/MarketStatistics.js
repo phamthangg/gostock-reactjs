@@ -135,12 +135,12 @@ class marketStatistics extends React.Component {
                                                                                 <span className="mr-2 text-white">Ngành 1</span>
                                                                                 <div
                                                                                     className="text-up mr-2 d-flex align-items-center">
-                                                                                    <img src="assets/svg/point-up.svg"
+                                                                                    <img src="../assets/svg/point-up.svg"
                                                                                          alt="Go Stock Poitn"/><span>234,43</span>
                                                                                 </div>
                                                                                 <div
                                                                                     className="text-down d-flex align-items-center">
-                                                                                    <img src="assets/svg/point-down.svg"
+                                                                                    <img src="../assets/svg/point-down.svg"
                                                                                          alt="Go Stock Poitn"/><span>2,43 %</span>
                                                                                 </div>
                                                                             </div>
@@ -166,12 +166,12 @@ class marketStatistics extends React.Component {
                                                                                 <span className="mr-2 text-white">Ngành 2</span>
                                                                                 <div
                                                                                     className="text-up mr-2 d-flex align-items-center">
-                                                                                    <img src="assets/svg/point-up.svg"
+                                                                                    <img src="../assets/svg/point-up.svg"
                                                                                          alt="Go Stock Poitn"/><span>234,43</span>
                                                                                 </div>
                                                                                 <div
                                                                                     className="text-down d-flex align-items-center">
-                                                                                    <img src="assets/svg/point-down.svg"
+                                                                                    <img src="../assets/svg/point-down.svg"
                                                                                          alt="Go Stock Poitn"/><span>2,43 %</span>
                                                                                 </div>
                                                                             </div>
@@ -197,12 +197,12 @@ class marketStatistics extends React.Component {
                                                                                 <span className="mr-2 text-white">Ngành 3</span>
                                                                                 <div
                                                                                     className="text-up mr-2 d-flex align-items-center">
-                                                                                    <img src="assets/svg/point-up.svg"
+                                                                                    <img src="../assets/svg/point-up.svg"
                                                                                          alt="Go Stock Poitn"/><span>234,43</span>
                                                                                 </div>
                                                                                 <div
                                                                                     className="text-down d-flex align-items-center">
-                                                                                    <img src="assets/svg/point-down.svg"
+                                                                                    <img src="../assets/svg/point-down.svg"
                                                                                          alt="Go Stock Poitn"/><span>2,43 %</span>
                                                                                 </div>
                                                                             </div>
@@ -228,12 +228,12 @@ class marketStatistics extends React.Component {
                                                                                 <span className="mr-2 text-white">Ngành 4</span>
                                                                                 <div
                                                                                     className="text-up mr-2 d-flex align-items-center">
-                                                                                    <img src="assets/svg/point-up.svg"
+                                                                                    <img src="../assets/svg/point-up.svg"
                                                                                          alt="Go Stock Poitn"/><span>234,43</span>
                                                                                 </div>
                                                                                 <div
                                                                                     className="text-down d-flex align-items-center">
-                                                                                    <img src="assets/svg/point-down.svg"
+                                                                                    <img src="../assets/svg/point-down.svg"
                                                                                          alt="Go Stock Poitn"/><span>2,43 %</span>
                                                                                 </div>
                                                                             </div>
@@ -259,12 +259,12 @@ class marketStatistics extends React.Component {
                                                                                 <span className="mr-2 text-white">Ngành 5</span>
                                                                                 <div
                                                                                     className="text-up mr-2 d-flex align-items-center">
-                                                                                    <img src="assets/svg/point-up.svg"
+                                                                                    <img src="../assets/svg/point-up.svg"
                                                                                          alt="Go Stock Poitn"/><span>234,43</span>
                                                                                 </div>
                                                                                 <div
                                                                                     className="text-down d-flex align-items-center">
-                                                                                    <img src="assets/svg/point-down.svg"
+                                                                                    <img src="../assets/svg/point-down.svg"
                                                                                          alt="Go Stock Poitn"/><span>2,43 %</span>
                                                                                 </div>
                                                                             </div>
@@ -290,12 +290,12 @@ class marketStatistics extends React.Component {
                                                                                 <span className="mr-2 text-white">Ngành 6</span>
                                                                                 <div
                                                                                     className="text-up mr-2 d-flex align-items-center">
-                                                                                    <img src="assets/svg/point-up.svg"
+                                                                                    <img src="../assets/svg/point-up.svg"
                                                                                          alt="Go Stock Poitn"/><span>234,43</span>
                                                                                 </div>
                                                                                 <div
                                                                                     className="text-down d-flex align-items-center">
-                                                                                    <img src="assets/svg/point-down.svg"
+                                                                                    <img src="../assets/svg/point-down.svg"
                                                                                          alt="Go Stock Poitn"/><span>2,43 %</span>
                                                                                 </div>
                                                                             </div>
@@ -321,12 +321,12 @@ class marketStatistics extends React.Component {
                                                                                 <span className="mr-2 text-white">Ngành 7</span>
                                                                                 <div
                                                                                     className="text-up mr-2 d-flex align-items-center">
-                                                                                    <img src="assets/svg/point-up.svg"
+                                                                                    <img src="../assets/svg/point-up.svg"
                                                                                          alt="Go Stock Poitn"/><span>234,43</span>
                                                                                 </div>
                                                                                 <div
                                                                                     className="text-down d-flex align-items-center">
-                                                                                    <img src="assets/svg/point-down.svg"
+                                                                                    <img src="../assets/svg/point-down.svg"
                                                                                          alt="Go Stock Poitn"/><span>2,43 %</span>
                                                                                 </div>
                                                                             </div>
@@ -352,12 +352,12 @@ class marketStatistics extends React.Component {
                                                                                 <span className="mr-2 text-white">Ngành 8</span>
                                                                                 <div
                                                                                     className="text-up mr-2 d-flex align-items-center">
-                                                                                    <img src="assets/svg/point-up.svg"
+                                                                                    <img src="../assets/svg/point-up.svg"
                                                                                          alt="Go Stock Poitn"/><span>234,43</span>
                                                                                 </div>
                                                                                 <div
                                                                                     className="text-down d-flex align-items-center">
-                                                                                    <img src="assets/svg/point-down.svg"
+                                                                                    <img src="../assets/svg/point-down.svg"
                                                                                          alt="Go Stock Poitn"/><span>2,43 %</span>
                                                                                 </div>
                                                                             </div>
@@ -383,12 +383,12 @@ class marketStatistics extends React.Component {
                                                                                 <span className="mr-2 text-white">Ngành 9</span>
                                                                                 <div
                                                                                     className="text-up mr-2 d-flex align-items-center">
-                                                                                    <img src="assets/svg/point-up.svg"
+                                                                                    <img src="../assets/svg/point-up.svg"
                                                                                          alt="Go Stock Poitn"/><span>234,43</span>
                                                                                 </div>
                                                                                 <div
                                                                                     className="text-down d-flex align-items-center">
-                                                                                    <img src="assets/svg/point-down.svg"
+                                                                                    <img src="../assets/svg/point-down.svg"
                                                                                          alt="Go Stock Poitn"/><span>2,43 %</span>
                                                                                 </div>
                                                                             </div>
@@ -414,12 +414,12 @@ class marketStatistics extends React.Component {
                                                                                 <span className="mr-2 text-white">Ngành 10</span>
                                                                                 <div
                                                                                     className="text-up mr-2 d-flex align-items-center">
-                                                                                    <img src="assets/svg/point-up.svg"
+                                                                                    <img src="../assets/svg/point-up.svg"
                                                                                          alt="Go Stock Poitn"/><span>234,43</span>
                                                                                 </div>
                                                                                 <div
                                                                                     className="text-down d-flex align-items-center">
-                                                                                    <img src="assets/svg/point-down.svg"
+                                                                                    <img src="../assets/svg/point-down.svg"
                                                                                          alt="Go Stock Poitn"/><span>2,43 %</span>
                                                                                 </div>
                                                                             </div>
@@ -445,12 +445,12 @@ class marketStatistics extends React.Component {
                                                                                 <span className="mr-2 text-white">Ngành 11</span>
                                                                                 <div
                                                                                     className="text-up mr-2 d-flex align-items-center">
-                                                                                    <img src="assets/svg/point-up.svg"
+                                                                                    <img src="../assets/svg/point-up.svg"
                                                                                          alt="Go Stock Poitn"/><span>234,43</span>
                                                                                 </div>
                                                                                 <div
                                                                                     className="text-down d-flex align-items-center">
-                                                                                    <img src="assets/svg/point-down.svg"
+                                                                                    <img src="../assets/svg/point-down.svg"
                                                                                          alt="Go Stock Poitn"/><span>2,43 %</span>
                                                                                 </div>
                                                                             </div>
@@ -476,12 +476,12 @@ class marketStatistics extends React.Component {
                                                                                 <span className="mr-2 text-white">Ngành 12</span>
                                                                                 <div
                                                                                     className="text-up mr-2 d-flex align-items-center">
-                                                                                    <img src="assets/svg/point-up.svg"
+                                                                                    <img src="../assets/svg/point-up.svg"
                                                                                          alt="Go Stock Poitn"/><span>234,43</span>
                                                                                 </div>
                                                                                 <div
                                                                                     className="text-down d-flex align-items-center">
-                                                                                    <img src="assets/svg/point-down.svg"
+                                                                                    <img src="../assets/svg/point-down.svg"
                                                                                          alt="Go Stock Poitn"/><span>2,43 %</span>
                                                                                 </div>
                                                                             </div>
@@ -2334,7 +2334,7 @@ class marketStatistics extends React.Component {
                                         </div>
                                         <div className="modal-body">
                                             <div className="text-center">
-                                                <img src="assets/images/users/avatar-4.jpg" alt="user-image"
+                                                <img src="../assets/images/users/avatar-4.jpg" alt="user-image"
                                                      className="img-thumbnail avatar-xl rounded-circle"/>
                                             </div>
                                             <h4 className="text-uppercase text-center my-2">Trần Dần</h4>
