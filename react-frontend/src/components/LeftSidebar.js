@@ -108,7 +108,7 @@ class LeftSidebar extends React.Component {
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="javascript:void(0);">
+                                    <a href="#">
                                         <img src="../assets/svg/left-nav-7.svg" alt="left nav img"/>
                                         <span> Công cụ hỗ trợ PTCB <b
                                             className="fa fa-info-circle ml-1 fs-13 icon-info"

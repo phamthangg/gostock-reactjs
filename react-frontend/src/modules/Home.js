@@ -77,7 +77,7 @@ class Home extends React.Component {
                                                          style={{backgroundImage:"url(../assets/images/demo/stock/stock-4.jpg)"}}>
                                                         <p>Từ điểm mua ngày 17/09</p>
                                                         <div className="d-flex align-items-center">
-                                                            <div className="sub-stock-sort">
+                                f                            <div className="sub-stock-sort">
                                                                 C+
                                                             </div>
                                                             <div className="sub-stock-right">
@@ -222,7 +222,7 @@ class Home extends React.Component {
                                                                     phí</p>
                                                             </div>
                                                             <div className="mt-3 d-flex justify-content-center">
-                                                                <a href="javascript:void(0);"
+                                                                <a href="#"
                                                                    className="btn btn-success btn-rounded waves-effect waves-light text-center">
                                                                     <i className="fa fa-plus mr-1"></i> <span
                                                                     className="font-semibold">Đăng ký</span> </a>

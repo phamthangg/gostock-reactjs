@@ -26,7 +26,7 @@ class Topbar extends React.Component {
                             </div>
                         </li>
                         <li className="d-none d-sm-block">
-                            <a href="javascript:void(0);" className="nav-link ">
+                            <a href="#" className="nav-link ">
                                 <button type="button"
                                         className="btn btn-success btn-rounded waves-effect waves-light width-md">
                                     <i className="fa fa-plus mr-1"></i> <span
@@ -35,13 +35,13 @@ class Topbar extends React.Component {
                         </li>
                         <li className="dropdown d-none d-lg-block">
                             <a className="nav-link dropdown-toggle mr-0 waves-effect waves-light"
-                               data-toggle="dropdown" href="javascript:void(0);" role="button"
+                               data-toggle="dropdown" href="#" role="button"
                                aria-haspopup="false" aria-expanded="false">
                                 <img src="../assets/images/flags/vietnam.svg" alt="user-image" height="24"/> <span
                                 className="align-middle"></span>
                             </a>
                             <div className="dropdown-menu dropdown-menu-right">
-                                <a href="javascript:void(0);" className="dropdown-item notify-item">
+                                <a href="#" className="dropdown-item notify-item">
                                     <img src="../assets/images/flags/united-kingdom.svg" alt="user-image"
                                          className="mr-1" height="24"/> <span
                                     className="align-middle">English</span>
@@ -50,7 +50,7 @@ class Topbar extends React.Component {
                         </li>
                         <li className="dropdown notification-list notification-are">
                             <a className="nav-link dropdown-toggle waves-effect waves-light"
-                               data-toggle="dropdown" href="javascript:void(0);" role="button"
+                               data-toggle="dropdown" href="#" role="button"
                                aria-haspopup="false" aria-expanded="false">
                                 <i className="mdi mdi-bell noti-icon text-muted"></i>
                                 <span className="badge badge-info noti-icon-badge">21</span>
@@ -185,7 +185,7 @@ class Topbar extends React.Component {
                         </li>
                         <li className="dropdown notification-list">
                             <a className="nav-link dropdown-toggle nav-user mr-0 waves-effect waves-light"
-                               data-toggle="dropdown" href="javascript:void(0);" role="button"
+                               data-toggle="dropdown" href="#" role="button"
                                aria-haspopup="false" aria-expanded="false">
                                 <img src="../assets/images/users/avatar-4.jpg" alt="user-image"
                                      className="rounded-circle"/>
@@ -194,7 +194,7 @@ class Topbar extends React.Component {
                         </span>
                             </a>
                             <div className="dropdown-menu dropdown-menu-right profile-dropdown ">
-                                <a href="javascript:void(0);" className="dropdown-item notify-item"
+                                <a href="#" className="dropdown-item notify-item"
                                    data-toggle="modal" data-target="#user-info">
                                     <i className="dripicons-user"></i>
                                     <span>Thông tin tài khoản</span>
@@ -245,7 +245,8 @@ class Topbar extends React.Component {
                         <li className="float-left d-none d-md-block flex-grow-1">
                             <div className="poit-scroll">
                                 <div className="poit-scroll-marquee">
-                                    <marquee onmouseover="this.stop();" onmouseout="this.start();">
+                                    {/*onMouseOver="this.stop();" onMouseOut="this.start();"*/}
+                                    <marquee>
                                         <div className="poit-scroll-items">
                                             <div className="poit-scroll-item d-flex align-items-center">
                                                 <span>VN-INDEX</span>

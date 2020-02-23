@@ -8,7 +8,7 @@ class Footer extends React.Component {
                     <div className="container-fluid">
                         <div className="row">
                             <div className="col-12 col-sm-auto text-center text-sm-left mb-2 mb-sm-0">
-                                <span className="text-muted">© 2019</span> <a href="javascript:void(0);"
+                                <span className="text-muted">© 2019</span> <a href="#"
                                                                               className="font-bold text-info">Go Stock</a>
                             </div>
                             <div className="col-12 col-sm-auto text-right flex-grow-1">
