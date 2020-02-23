@@ -1,6 +1,51 @@
 import React from "react";
+import urls from '../modules/Content/urls';
+import {HOME_URL} from "../setting";
+import $ from 'jquery'
 
 class LeftSidebar extends React.Component {
+    componentDidMount() {
+        let pathName = window.location.pathname;
+        $('#sidebar-menu').find('a').removeClass('active');
+        switch (pathName) {
+            case HOME_URL:
+                $('a#home').addClass('active');
+                return;
+            case urls.marketStatistics:
+                $('a#marketStatistics').addClass('active');
+                return;
+            case urls.technicalAnalysis:
+                $('a#technicalAnalysis').addClass('active');
+                return;
+            case urls.signalsFilters:
+                $('a#signalsFilters').addClass('active');
+                return;
+            case urls.recommendations:
+                $('a#recommendations').addClass('active');
+                return;
+            case urls.catalogManagement:
+                $('a#catalogManagement').addClass('active');
+                return;
+            case urls.filter:
+                $('a#filter').addClass('active');
+                return;
+            case urls.philTown:
+                $('a#philTown').addClass('active');
+                return;
+            case urls.detailsCharts:
+                $('a#detailsCharts').addClass('active');
+                return;
+            case urls.createReport:
+                $('a#createReport').addClass('active');
+                return;
+            case urls.manual:
+                $('a#manual').addClass('active');
+                return;
+            case urls.upgradeAccount:
+                $('a#upgradeAccount').addClass('active');
+                return;
+        }
+    }
     render() {
         return (
             <>
@@ -9,7 +54,7 @@ class LeftSidebar extends React.Component {
                         <div id="sidebar-menu" className="mm-active">
                             <ul className="metismenu mm-show" id="side-menu">
                                 <li className="mm-active">
-                                    <a href="5.index.html" className="active">
+                                    <a href={HOME_URL} id="home">
                                         <img src="../assets/svg/left-nav-1.svg" alt="left nav img"/>
                                         <span> Home <b className="fa fa-info-circle ml-1 fs-13 icon-info"
                                                        aria-hidden="true" data-toggle="tooltip"
@@ -18,7 +63,7 @@ class LeftSidebar extends React.Component {
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="6.Thống kê thị trường.html">
+                                    <a href={urls.marketStatistics} id="marketStatistics">
                                         <img src="../assets/svg/left-nav-2.svg" alt="left nav img"/>
                                         <span> Thống kê thị trường <b
                                             className="fa fa-info-circle ml-1 fs-13 icon-info"
@@ -27,7 +72,7 @@ class LeftSidebar extends React.Component {
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="7.Phân tích kỹ thuật.html">
+                                    <a href={urls.technicalAnalysis} id="technicalAnalysis">
                                         <img src="../assets/svg/left-nav-3.svg" alt="left nav img"/>
                                         <span> Phân tích kỹ thuật <b
                                             className="fa fa-info-circle ml-1 fs-13 icon-info"
@@ -36,7 +81,7 @@ class LeftSidebar extends React.Component {
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="8.Tín hiệu và bộ lọc.html">
+                                    <a href={urls.signalsFilters} id="signalsFilters">
                                         <img src="../assets/svg/left-nav-4.svg" alt="left nav img"/>
                                         <span> Tín hiệu và bộ lọc <b
                                             className="fa fa-info-circle ml-1 fs-13 icon-info"
@@ -45,7 +90,7 @@ class LeftSidebar extends React.Component {
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="9.Khuyến nghị của Gostock.html">
+                                    <a href={urls.recommendations} id="recommendations">
                                         <img src="../assets/svg/left-nav-5.svg" alt="left nav img"/>
                                         <span> Khuyến nghị của Gostock <b
                                             className="fa fa-info-circle ml-1 fs-13 icon-info"
@@ -54,7 +99,7 @@ class LeftSidebar extends React.Component {
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="10.Quản trị danh mục.html">
+                                    <a href={urls.catalogManagement} id="catalogManagement">
                                         <img src="../assets/svg/left-nav-6.svg" alt="left nav img"/>
                                         <span> Quản trị danh mục <b
                                             className="fa fa-info-circle ml-1 fs-13 icon-info"
@@ -73,19 +118,19 @@ class LeftSidebar extends React.Component {
                                     </a>
                                     <ul className="nav-second-level" aria-expanded="false">
                                         <li>
-                                            <a href="11.Bộ lọc.html">Bộ lọc <b
+                                            <a href={urls.filter} id="filter">Bộ lọc <b
                                                 className="fa fa-info-circle ml-1 fs-13 icon-info"
                                                 aria-hidden="true" data-toggle="tooltip" data-html="true"
                                                 title='<em>Giải thích ý nghĩa</em>'></b></a>
                                         </li>
                                         <li>
-                                            <a href="12.PhilTown.html">Phương pháp 4M – Phil Town <b
+                                            <a href={urls.philTown} id="philTown">Phương pháp 4M – Phil Town <b
                                                 className="fa fa-info-circle ml-1 fs-13 icon-info"
                                                 aria-hidden="true" data-toggle="tooltip" data-html="true"
                                                 title='<em>Giải thích ý nghĩa</em>'></b></a>
                                         </li>
                                         <li>
-                                            <a href="13.Chi tiết BCTC và biểu đồ.html">Chi tiết BCTC và biểu
+                                            <a href={urls.detailsCharts} id="detailsCharts">Chi tiết BCTC và biểu
                                                 đồ <b className="fa fa-info-circle ml-1 fs-13 icon-info"
                                                       aria-hidden="true" data-toggle="tooltip" data-html="true"
                                                       title='<em>Giải thích ý nghĩa</em>'></b></a>
@@ -93,7 +138,7 @@ class LeftSidebar extends React.Component {
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="14.Tạo Báo Cáo.html">
+                                    <a href={urls.createReport} id="createReport">
                                         <img src="../assets/svg/left-nav-8.svg" alt="left nav img"/>
                                         <span> Tạo Báo Cáo <b
                                             className="fa fa-info-circle ml-1 fs-13 icon-info"
@@ -102,7 +147,7 @@ class LeftSidebar extends React.Component {
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="15.Hướng dẫn sử dụng.html">
+                                    <a href={urls.manual} id="manual">
                                         <img src="../assets/svg/left-nav-9.svg" alt="left nav img"/>
                                         <span> Hướng dẫn sử dụng <b
                                             className="fa fa-info-circle ml-1 fs-13 icon-info"
@@ -111,7 +156,7 @@ class LeftSidebar extends React.Component {
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="17.Nâng cấp tài khoản.html">
+                                    <a href={urls.upgradeAccount} id="upgradeAccount">
                                         <img src="../assets/svg/left-nav-10.svg" alt="left nav img"/>
                                         <span> Nâng cấp tài khoản <b
                                             className="fa fa-info-circle ml-1 fs-13 icon-info"

@@ -1,4 +1,5 @@
 import React from "react";
+import {HOME_URL} from "../setting";
 
 class Topbar extends React.Component {
     state = {
@@ -212,7 +213,7 @@ class Topbar extends React.Component {
                     </ul>
                     <ul className="list-unstyled menu-left mb-0 d-flex">
                         <li className="float-left">
-                            <a href="index.html" className="logo">
+                            <a href={HOME_URL} className="logo">
                         <span className="logo-lg">
                             <img src="../assets/images/logo-dark.png" alt="" height="22"/>
                         </span>
