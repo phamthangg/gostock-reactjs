@@ -9,6 +9,7 @@ import Filter from "./screens/ContentMain/Filter";
 import PhilTown from "./screens/ContentMain/PhilTown";
 import DetailsCharts from "./screens/ContentMain/DetailsCharts";
 import CreateReport from "./screens/ContentMain/CreateReport";
+import Manual from "./screens/ContentMain/Manual";
 
 import {AnonymousRoute} from '../../components/Route';
 
@@ -25,6 +26,7 @@ class Content extends React.Component {
             <AnonymousRoute exact path={urls.philTown} component={PhilTown}/>
             <AnonymousRoute exact path={urls.detailsCharts} component={DetailsCharts}/>
             <AnonymousRoute exact path={urls.createReport} component={CreateReport}/>
+            <AnonymousRoute exact path={urls.manual} component={Manual}/>
         </div>
     }
 }

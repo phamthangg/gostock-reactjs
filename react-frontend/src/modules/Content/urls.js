@@ -14,6 +14,7 @@ const CONTENT_URLS = {
     philTown: `${CONTENT_MODULE}/philTown`,
     detailsCharts: `${CONTENT_MODULE}/detailsCharts`,
     createReport: `${CONTENT_MODULE}/createReport`,
+    manual: `${CONTENT_MODULE}/manual`,
 };
 
 export default CONTENT_URLS;
