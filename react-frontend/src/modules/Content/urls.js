@@ -15,6 +15,7 @@ const CONTENT_URLS = {
     detailsCharts: `${CONTENT_MODULE}/detailsCharts`,
     createReport: `${CONTENT_MODULE}/createReport`,
     manual: `${CONTENT_MODULE}/manual`,
+    upgradeAccount: `${CONTENT_MODULE}/upgradeAccount`,
 };
 
 export default CONTENT_URLS;
