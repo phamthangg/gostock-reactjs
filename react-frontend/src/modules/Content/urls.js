@@ -13,6 +13,7 @@ const CONTENT_URLS = {
     filter: `${CONTENT_MODULE}/filter`,
     philTown: `${CONTENT_MODULE}/philTown`,
     detailsCharts: `${CONTENT_MODULE}/detailsCharts`,
+    createReport: `${CONTENT_MODULE}/createReport`,
 };
 
 export default CONTENT_URLS;
